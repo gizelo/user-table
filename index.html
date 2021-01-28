@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width"
+          name="viewport">
+    <meta content="ie=edge"
+          http-equiv="X-UA-Compatible"
+    >
+    <title>Users table</title>
+    <link href="https://fonts.gstatic.com"
+          rel="preconnect"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap"
+          rel="stylesheet"
+    >
+    <link href="css/main.min.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/dc37bca726.js"></script>
+</head>
+<body>
+<div class="app">
+    <div class="app-header">
+        <h1 class="app-title">User table</h1>
+        <button class="btn btn-lg"
+                onclick="openNewUserModal()"
+        >
+            <i class="fas fa-plus"></i>
+            New user
+        </button>
+    </div>
+    <div class="users-table-container">
+        <table class="users-table">
+            <thead class="users-table__head">
+            <tr>
+                <th class="users-table__header__cell"></th>
+                <th class="users-table__header__cell"
+                    onclick="sortUsers('name')"
+                >
+                    Name
+                </th>
+                <th class="users-table__header__cell"
+                    onclick="sortUsers('username')"
+                >
+                    Username
+                </th>
+                <th class="users-table__header__cell"
+                    onclick="sortUsers('email')"
+                >
+                    Email
+                </th>
+                <th class="users-table__header__cell"
+                    onclick="sortUsers('website')"
+                >
+                    Website
+                </th>
+                <th class="users-table__header__cell"></th>
+            </tr>
+            </thead>
+            <tbody class="users-table__body">
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-bg">
+        <div class="user-modal">
+            <div class="user-modal__header">
+                <h2 class="user-modal__header__title"></h2>
+                <button class="btn btn-lg"
+                        onclick="closeUserModal()"
+                >
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="user-modal__content">
+                <form class="newUserForm"
+                      name="newUserForm"
+                >
+                </form>
+            </div>
+            <div class="user-modal__footer">
+                <button class="btn btn-lg"
+                        onclick="saveUser()"
+                >
+                    Save user
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.min.js"></script>
+</body>
+</html>
